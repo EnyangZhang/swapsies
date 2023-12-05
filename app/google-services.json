@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "579774321339",
+    "project_id": "swapsies-1afc0",
+    "storage_bucket": "swapsies-1afc0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:579774321339:android:9e6e2d2c481509c79b4f9e",
+        "android_client_info": {
+          "package_name": "com.example.swapsies"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "579774321339-i7c5jkmmueu8nl1jvpni1haglan7uns2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB6WYwFLEXUd97jK_oxogc7wdH6zIQGF7k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "579774321339-i7c5jkmmueu8nl1jvpni1haglan7uns2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.swapsies.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_viewOtherTradeItemFragment"
+            app:destination="@id/viewOtherTradeItemFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_viewMyTradeItemFragment"
+            app:destination="@id/viewMyTradeItemFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_dashboard"
+        android:name="com.example.swapsies.ui.additem.AddItemFragment"
+        android:label="@string/title_add_item"
+        tools:layout="@layout/fragment_additem" />
+
+    <fragment
+        android:id="@+id/tradeFragment"
+        tools:layout="@layout/fragment_trade_container"
+        android:name="com.example.swapsies.ui.trades.TradeContainerFragment"
+        android:label="@string/title_trades" >
+        <action
+            android:id="@+id/action_navigation_trades_to_tradeDetailFragment"
+            app:destination="@id/tradeDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_settings"
+        android:name="com.example.swapsies.ui.settings.SettingsFragment"
+        android:label="@string/settings_fragment_title" />
+    <fragment
+        android:id="@+id/tradeDetailFragment"
+        android:name="com.example.swapsies.ui.trades.TradeDetailFragment"
+        android:label="@string/trade_detail_fragment_title"
+        tools:layout="@layout/fragment_trade_detail">
+        <action
+            android:id="@+id/action_tradeDetailFragment_to_navigation_trades"
+            app:destination="@id/tradeFragment" />
+        <argument
+            android:name="currentTrade"
+            app:argType="com.example.swapsies.model.Trade" />
+        <argument
+            android:name="tradeDetailScreen"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewMyTradeItemFragment"
+        android:name="com.example.swapsies.ui.home.ViewMyTradeItemFragment"
+        android:label="@string/detail_fragment_title">
+        <argument
+            android:name="currentTradeItem"
+            app:argType="com.example.swapsies.model.TradeItem" />
+        <action
+            android:id="@+id/action_viewMyTradeItemFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewOtherTradeItemFragment"
+        android:name="com.example.swapsies.ui.home.ViewOtherTradeItemFragment"
+        android:label="@string/detail_fragment_title">
+        <argument
+            android:name="currentTradeItem"
+            app:argType="com.example.swapsies.model.TradeItem" />
+        <action
+            android:id="@+id/action_viewOtherTradeItemFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+</navigation>

@@ -1,0 +1,23 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <PreferenceCategory app:title="Loading">
+
+        <SwitchPreferenceCompat
+            app:key="@string/splash_screen_key"
+            app:summaryOff="@string/splash_screen_off"
+            app:summaryOn="@string/splash_screen_on"
+
+            app:title="@string/splash_screen_title" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="Accounts">
+        <Preference
+            app:key="logout"
+            app:title="@string/logout">
+        </Preference>
+    </PreferenceCategory>
+
+</PreferenceScreen>
